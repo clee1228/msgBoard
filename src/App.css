@@ -1,3 +1,7 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Chivo&display=swap');
+
 .form{
     height: 200px;
     width: 60%;
@@ -8,5 +12,11 @@
 .message{
     width: 60%;
     margin: 1em 20%
+
+}
+
+.msg-body{
+    font-family: 'Chivo', sans-serif;
+    color: gray;
 }
 

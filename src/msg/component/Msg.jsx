@@ -7,7 +7,8 @@ const Msg = (props) => (
     <Card.Body className ="msg-body">
         {
             props.body.map((msgPart, index) => (
-                <div key={index}>{msgPart} </div>
+                
+                <div key={index}>  {"username"} <p> {msgPart} </p></div>
 
         ))
         }
