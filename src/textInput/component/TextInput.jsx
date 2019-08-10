@@ -9,6 +9,7 @@ class textInput extends Component{
         super(props);
         this.state = {
             newMsgBody: '',
+          
         };
 
         this.handleInput = this.handleInput.bind(this);
@@ -21,10 +22,18 @@ class textInput extends Component{
          });
       }
 
+    // handleUser(name){
+    //   this.setState({
+    //     username: name.target.value
+    //   })
+    // }
+
     createMsg(){
         this.props.addMsg(this.state.newMsgBody);
+        // console.log('username =' + this.state.username);
         this.setState({
             newMsgBody: '',
+            // username: '',
         });
     }
 
@@ -33,17 +42,17 @@ class textInput extends Component{
             <div>
 
             <Form className = "form">
-            <InputGroup className="mb-3" size="sm">
+            {/* <InputGroup className="mb-3" size="sm">
                 <InputGroup.Prepend>
                   <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
                 </InputGroup.Prepend>
                 <FormControl
                   placeholder="Username"
                   name="username"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
+                  // value={this.state.username}
+                  // onChange={this.handleUser}
                 />
-              </InputGroup>
+              </InputGroup> */}
              
   
               <Form.Group controlId="inputMessage">

@@ -8,7 +8,7 @@ const Msg = (props) => (
         {
             props.body.map((msgPart, index) => (
                 
-                <div key={index}>  {"username"} <p> {msgPart} </p></div>
+                <div key={index}>  <p> {msgPart} </p></div>
 
         ))
         }

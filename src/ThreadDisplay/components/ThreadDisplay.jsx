@@ -23,7 +23,7 @@ class ThreadDisplay extends Component {
     }
 
     addMsg(msgBody) {
-        const msgToSave = {msgBody};
+        const msgToSave = {msgBody:msgBody};
         this.dbRef.push().set(msgToSave);
     }
 
@@ -31,6 +31,7 @@ class ThreadDisplay extends Component {
         const msgs = this.state.msgs;
         const brokenDownPost = response.msgBody.split(/[\r\n]/g);
         msgs.push(brokenDownPost);
+        console.log('msgs =' + msgs)
         this.setState({
             msgs: msgs,
         });
