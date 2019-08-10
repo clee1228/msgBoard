@@ -8,7 +8,7 @@ class textInput extends Component{
     constructor(props){
         super(props);
         this.state = {
-            newBody: '',
+            newMsgBody: '',
         };
 
         this.handleInput = this.handleInput.bind(this);
@@ -17,14 +17,14 @@ class textInput extends Component{
 
     handleInput(ev){
         this.setState({
-          newBody: ev.target.value
+          newMsgBody: ev.target.value
          });
       }
 
     createMsg(){
-        this.props.addMsg(this.state.newBody);
+        this.props.addMsg(this.state.newMsgBody);
         this.setState({
-            newBody: '',
+            newMsgBody: '',
         });
     }
 
@@ -53,7 +53,7 @@ class textInput extends Component{
                     name="message"
                     rows="3" 
                     placeholder="Type your message here..." 
-                    value={this.state.newBody}
+                    value={this.state.newMsgBody}
                     onChange={this.handleInput} />
                 </Form.Group>
              

@@ -5,8 +5,13 @@ const Msg = (props) => (
 
     <Card className ="message">
     <Card.Body className ="msg-body">
-        {props.body}
-    </Card.Body>
+        {
+            props.body.map((msgPart, index) => (
+                <div key={index}>{msgPart} </div>
+
+        ))
+        }
+    </Card.Body>  
     </Card>
 
 
